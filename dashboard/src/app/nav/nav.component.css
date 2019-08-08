@@ -4,16 +4,8 @@
     padding-inline-start: 0px;
 }
 
-.item-do-menu{
-    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    transition-property:
-        background-color,
-        border-left;
-}
-
 .item-do-menu:hover{
     background-color: #b0bec5;
-    border-left: 5px solid #37474f;
 }
 
 .item-do-menu a{
@@ -22,13 +14,19 @@
     padding: 10px;
     text-decoration: none;
     color: #eee;
-    transition: color 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition-property:
+        background-color,
+        border-left;
 }
 
 .item-do-menu a:hover{
-    color: #424242
+    color: #424242;
+    border-left: 5px solid #37474f;
 }
 
 .item-do-menu .ativo{
+    color: #424242;
     background-color: #b39ddb;
+    border-left: 5px solid #37474f;
 }

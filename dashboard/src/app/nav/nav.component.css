@@ -1,0 +1,34 @@
+/* MENU */
+.itens-do-menu{
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.item-do-menu{
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition-property:
+        background-color,
+        border-left;
+}
+
+.item-do-menu:hover{
+    background-color: #b0bec5;
+    border-left: 5px solid #37474f;
+}
+
+.item-do-menu a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #eee;
+    transition: color 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.item-do-menu a:hover{
+    color: #424242
+}
+
+.item-do-menu .ativo{
+    background-color: #b39ddb;
+}

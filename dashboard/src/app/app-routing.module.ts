@@ -5,6 +5,8 @@ import { MainComponent } from './main/main.component';
 import { RelatoriosComponent } from './main/relatorios/relatorios.component';
 import { FaturasComponent } from './main/faturas/faturas.component';
 import { ProdutosComponent } from './main/produtos/produtos.component';
+import { CadastroComponent } from './main/produtos/cadastro/cadastro.component';
+import { ListagemComponent } from './main/produtos/listagem/listagem.component';
 import { PerfilComponent } from './main/perfil/perfil.component';
 
 const routes: Routes = [
@@ -14,7 +16,14 @@ const routes: Routes = [
 		children: [
 			{path: 'relatorios', component: RelatoriosComponent},
 			{path: 'faturas', component: FaturasComponent},
-			{path: 'produtos', component: ProdutosComponent},
+			{
+				path: 'produtos',
+				component: ProdutosComponent,
+				children: [
+					{path: 'cadastro', component: CadastroComponent},
+					{path: 'listagem', component: ListagemComponent}
+				]
+			},
 			{path: 'perfil', component: PerfilComponent}
 		]
 	}

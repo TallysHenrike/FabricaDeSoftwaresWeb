@@ -11,6 +11,7 @@ a{
     align-items: center;
     text-decoration: none;
     font-size: 2.5rem;
+    background-color: #455a64;
     color: #fff;
     transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     transition-property:
@@ -18,15 +19,22 @@ a{
         color;
 }
 a:nth-of-type(1){
-    background-color: #9c27b0;
+    border-right: 1px solid #263238;
 }
 a:nth-of-type(2){
-    background-color: #673ab7;
+    border-left: 1px solid #263238;
 }
 
-a:nth-of-type(1).ativo{
-    background-color: #ba68c8;
+a:nth-of-type(1).ativo,
+a:nth-of-type(1):hover{
+    background-color: #9c27b0;
 }
-a:nth-of-type(2).ativo{
-    background-color: #9575cd;
+a:nth-of-type(2).ativo,
+a:nth-of-type(2):hover{
+    background-color: #673ab7;;
+}
+
+.main{
+    height: calc(100% - 70px);
+    background-color: #78909c
 }

@@ -10,8 +10,8 @@ a{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 2.5rem;
-    background-color: #455a64;
+    font-size: 1.8rem;
+    background-image: linear-gradient(#546e7a, #455a64);
     color: #fff;
     transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     transition-property:
@@ -27,11 +27,11 @@ a:nth-of-type(2){
 
 a:nth-of-type(1).ativo,
 a:nth-of-type(1):hover{
-    background-color: #9c27b0;
+    background-image: linear-gradient(#ab47bc, #9c27b0);
 }
 a:nth-of-type(2).ativo,
 a:nth-of-type(2):hover{
-    background-color: #673ab7;;
+    background-image: linear-gradient(#7e57c2, #673ab7);
 }
 
 .main{

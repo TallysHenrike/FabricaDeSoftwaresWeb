@@ -43,7 +43,7 @@ body {
 
     grid-template-columns: 200px 1fr;
     grid-template-rows:
-        200px /*cabecalho cabecalho cabecalho*/
+        minmax(350px, 20vh) /*cabecalho cabecalho cabecalho*/
         minmax(100vh, 1fr) /*navegacao content content*/
         200px; /*rodape rodape rodape*/
     grid-gap: 2px;
@@ -81,7 +81,7 @@ body {
     }
 }
 
-/* SIDENAVegacao */
+/* navegacao */
 #abrir-menu {
     display: none;
 }
@@ -105,3 +105,14 @@ body {
         display: block;
     }
 }
+
+/* imagem de fundo padrão do #cabecalho e posição do menu */
+#cabecalho{
+    background-image: url(assets/tecnologia-banner.jpg);
+    background-size: cover;
+    background-position: top 0px center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+  }

@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: rgba(66, 66, 66, .2);
+    top: 0px;
+    position: inherit;
+    transition: background-color 0.5s cubic-bezier(1, 0, 0.6, 1);
+}
+
+a{
+    padding: 20px;
+    color: #fff;
+}

@@ -4,7 +4,7 @@
     background-color: #607d8b;
     border: 2px solid #fff;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 20px 15px;
     cursor: pointer;
     transition: .5s cubic-bezier(0, 0, 0.2, 1);
@@ -49,7 +49,7 @@
 .active{
     margin-left: 0px;
     border-radius: 0px 10px 10px 0px;
-    border: none;
+    border: 2px solid #607d8b;
 }
 
 .active .toggle-btn {

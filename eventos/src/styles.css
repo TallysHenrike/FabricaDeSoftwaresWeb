@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1200 - 320)));
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0px;
+    background-image: linear-gradient(#7e57c2, #673ab7);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+/* COR PADRÃO */
+#cabecalho,
+#principal{
+    background-image: linear-gradient(#eee, #e0e0e0);
+}
+#navegacao{
+    background-image: linear-gradient(#424242, #212121);
+}
+#rodape{
+    background-image: linear-gradient(#37474f, #263238);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-areas:
+        "cabecalho cabecalho cabecalho"
+        "navegacao principal principal"
+        "rodape rodape rodape";
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows:
+        200px /*cabecalho cabecalho cabecalho*/
+        minmax(100vh, 1fr) /*navegacao content content*/
+        200px; /*rodape rodape rodape*/
+    grid-gap: 2px;
+}
+
+#cabecalho {
+    grid-area: cabecalho;
+}
+
+#navegacao {
+    grid-area: navegacao;
+}
+
+#principal {
+    grid-area: principal;
+}
+
+#rodape {
+    grid-area: rodape;
+}
+
+@media (max-width: 768px) {
+    /* GRID */
+    .grid {
+        grid-template-areas:
+            "cabecalho"
+            "principal"
+            "rodape";
+
+        grid-template-columns: 100%;
+        grid-template-rows:
+            minmax(200px, auto)
+            minmax(100vh, auto)
+            minmax(200px, auto);
+    }
+}
+
+/* SIDENAVegacao */
+#abrir-menu {
+    display: none;
+}
+
+.menu-aberto {
+    margin-left: 0px;
+}
+
+@media (max-width: 768px) {
+    #navegacao {
+        overflow-x: hidden;
+        position: fixed;
+        width: 70vw;
+        margin-left: -70vw;
+        height: 100vh;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        transition: margin-left 0.5s cubic-bezier(1, 0, 0.6, 1);
+    }
+
+    #abrir-menu {
+        display: block;
+    }
+}

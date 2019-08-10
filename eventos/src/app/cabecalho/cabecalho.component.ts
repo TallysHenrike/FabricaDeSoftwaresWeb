@@ -24,11 +24,9 @@ export class CabecalhoComponent implements OnInit {
 		let menu = this.element.nativeElement.querySelector('#menu');
 		
 		if(window.scrollY >= (parallax.scrollHeight - menu.scrollHeight)){
-			menu.style.position = 'fixed';
-			menu.style.backgroundColor = 'rgba(66, 66, 66, 1)';
+			menu.classList.add('fixo');
 		}else{
-			menu.style.position = 'inherit';
-			menu.style.backgroundColor = 'rgba(66, 66, 66, .2)';
+			menu.classList.remove('fixo');
 		}
 	}
 

@@ -1,0 +1,18 @@
+img{
+    max-width: 300px;
+    min-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.titulo,
+.conteudo{
+    color: #fff;
+    padding: 1rem 1rem 0px 1rem;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+}

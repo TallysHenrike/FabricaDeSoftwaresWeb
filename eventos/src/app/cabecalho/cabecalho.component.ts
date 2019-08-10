@@ -19,11 +19,10 @@ export class CabecalhoComponent implements OnInit {
 			let suave = window.scrollY * 70 / 100;
 			//console.log(parallax.offsetHeight, window.scrollY);
 			parallax.style.backgroundPosition = `center top ${suave}px`;
-		}
+		}else{parallax.removeAttribute('style');}
 
 		let menu = this.element.nativeElement.querySelector('#menu');
 		
-		console.log(window.scrollY >= (parallax.scrollHeight - menu.scrollHeight))
 		if(window.scrollY >= (parallax.scrollHeight - menu.scrollHeight)){
 			menu.style.position = 'fixed';
 			menu.style.backgroundColor = 'rgba(66, 66, 66, 1)';

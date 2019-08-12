@@ -14,9 +14,11 @@ export class LazyLoadingIMGDirective {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 				  let image = this.element.nativeElement;
-				  image.classList.remove("lazy");
-				  image.removeAttribute('LazyLoadingIMG');
 				  image.src = this.caminhoDaImagem;
+				  setTimeout(()=>{
+					  image.classList.remove("lazy");
+					  image.removeAttribute('LazyLoadingIMG');
+				  }, 300);
 				  //console.log(entry.target)
 				  this.intersectionObserver.unobserve(image);
 				}

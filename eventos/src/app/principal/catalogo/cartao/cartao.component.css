@@ -6,13 +6,14 @@ img{
     border-radius: 10px 0px 0px 10px;
 }
 
-.titulo,
-.conteudo{
-    color: #fff;
-    padding: 1rem;
-}
-
 .conteudo{
     display: flex;
     flex-direction: column;
+}
+
+.titulo,
+.descricao,
+.conteudo{
+    color: #fff;
+    padding: 1rem;
 }

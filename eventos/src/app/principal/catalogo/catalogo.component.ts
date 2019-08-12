@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CatalogoService } from './catalogo.service';
 import { CatalogoModel } from './catalogo.model';
 
@@ -9,12 +10,16 @@ import { CatalogoModel } from './catalogo.model';
 })
 export class CatalogoComponent implements OnInit {
 
-	public itens: CatalogoModel[];
+	public eventos: CatalogoModel[];
 
-	constructor(private catalogoService: CatalogoService) { }
+	constructor(
+		private route: ActivatedRoute,
+		private catalogoService: CatalogoService
+	) { }
 
 	ngOnInit() {
-		this.itens = this.catalogoService.getItens();
+		const id = this.route.snapshot.params.id;
+		this.eventos = this.catalogoService.listarEventosPorCategoria(parseInt(id));
 	}
 
 }

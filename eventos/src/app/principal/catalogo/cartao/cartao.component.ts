@@ -8,7 +8,7 @@ import { CatalogoModel } from '../catalogo.model';
 })
 export class CartaoComponent implements OnInit {
 
-	@Input() item: CatalogoModel;
+	@Input() evento: CatalogoModel;
 
 	constructor() { }
 

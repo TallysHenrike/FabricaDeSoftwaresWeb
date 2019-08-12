@@ -6,41 +6,28 @@ import { CatalogoModel } from './catalogo.model';
 })
 export class CatalogoService {
 
-	private itens: CatalogoModel[] = [
-		{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},{
-			titulo: 'Lorem ipsum dolor sit amet',
-			descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
-			caminhoDaImagem: 'assets/4.jpg'
-		},
-	];
+	private eventos: CatalogoModel[] = [];
 
-	constructor() { }
+	constructor() {
+		for(let i = 0; i < 20; i++){
+			this.eventos.push({
+				idEvento: i+1,
+				idCategoria: Math.floor(Math.random() * (5 - 1 + 1) + 1),
+				titulo: 'Lorem ipsum dolor sit amet',
+				descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero nunc, tristique eu varius in, malesuada vel odio. Donec ut turpis at sem condimentum facilisis a ut sem. Sed efficitur fringilla sodales. Sed ante magna, aliquet et lectus nec, convallis pulvinar arcu. Ut vel semper enim. Nunc aliquet velit eget luctus vulputate.',
+				caminhoDaImagem: `https://picsum.photos/id/${i}/300`
+			});
+		}
+	}
 
-	getItens(){
-		return this.itens;
+	listarEventos(): CatalogoModel[]{
+		return this.eventos;
+	}
+
+	listarEventosPorCategoria(id): CatalogoModel[]{
+		let eventos = this.eventos.filter((e)=>{
+			return e.idCategoria == id
+		});
+		return eventos;
 	}
 }

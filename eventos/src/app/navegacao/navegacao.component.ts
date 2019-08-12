@@ -14,7 +14,7 @@ export class NavegacaoComponent implements OnInit {
 	constructor(private navegacaoService: NavegacaoService) { }
 
 	ngOnInit() { 
-		this.categorias = this.navegacaoService.getCategorias();
+		this.categorias = this.navegacaoService.listarCategorias();
 	}
 
 }

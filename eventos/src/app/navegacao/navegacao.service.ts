@@ -1,36 +1,20 @@
 import { Categoria } from './navegacao.model';
 
 export class NavegacaoService {
-    private categorias: Categoria[] = [
-		{
-			idCategoria: 1,
-			nome: 'Business Intelligence',
-			descricao: 'Descrição de Business Intelligence',
-			caminhoDaImagem: 'caminho/imagem.png'
-		},
-		{
-			idCategoria: 2,
-			nome: 'Desenvolvimento Móvel',
-			descricao: 'Descrição de Desenvolvimento Movel',
-			caminhoDaImagem: 'caminho/imagem.png'
-		},
-		{
-			idCategoria: 3,
-			nome: 'DevOps',
-			descricao: 'Descrição de DevOps',
-			caminhoDaImagem: 'caminho/imagem.png'
-		},
-		{
-			idCategoria: 4,
-			nome: 'Inteligência artificial',
-			descricao: 'Descrição de Internet das coisas',
-			caminhoDaImagem: 'caminho/imagem.png'
-		}
-    ];
+    private categorias: Categoria[] = [];
     
-    constructor(){}
+    constructor(){
+		for(let i = 0; i < 4; i++){
+			this.categorias.push({
+				idCategoria: i+1,
+				nome: `Lorem ipsum ${i+1}`,
+				descricao: 'Descrição de Lorem ipsum',
+				caminhoDaImagem: 'caminho/imagem.png'
+			});
+		}
+	}
 
-    getCategorias(): Categoria[]{
+    listarCategorias(): Categoria[]{
         return this.categorias;
     }
 }

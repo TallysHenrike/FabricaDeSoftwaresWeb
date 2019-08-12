@@ -9,7 +9,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { NavegacaoService } from './navegacao/navegacao.service';
 import { CatalogoComponent } from './principal/catalogo/catalogo.component';
-import { DetalhesComponent } from './principal/detalhes/detalhes.component';
+import { EventoComponent } from './principal/evento/evento.component';
 import { ApresentacaoComponent } from './principal/apresentacao/apresentacao.component';
 import { LazyLoadingIMGDirective } from './utilitarios/lazy-loading-img.directive';
 import { CatalogoService } from './principal/catalogo/catalogo.service';
@@ -23,7 +23,7 @@ import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 		PrincipalComponent,
 		RodapeComponent,
 		CatalogoComponent,
-		DetalhesComponent,
+		EventoComponent,
 		ApresentacaoComponent,
 		LazyLoadingIMGDirective,
 		CartaoComponent

@@ -18,8 +18,9 @@ export class CatalogoComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		const id = this.route.snapshot.params.id;
-		this.eventos = this.catalogoService.listarEventosPorCategoria(parseInt(id));
+		this.route.params.subscribe(params => {
+			this.eventos = this.catalogoService.listarEventosPorCategoria(parseInt(params['id']));
+		});
 	}
 
 }

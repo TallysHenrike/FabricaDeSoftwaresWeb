@@ -9,7 +9,7 @@ export class CatalogoService {
 	private eventos: CatalogoModel[] = [];
 
 	constructor() {
-		for(let i = 0; i < 20; i++){
+		for(let i = 0; i < 50; i++){
 			this.eventos.push({
 				idEvento: i+1,
 				idCategoria: Math.floor(Math.random() * (5 - 1 + 1) + 1),
@@ -24,10 +24,7 @@ export class CatalogoService {
 		return this.eventos;
 	}
 
-	listarEventosPorCategoria(id): CatalogoModel[]{
-		let eventos = this.eventos.filter((e)=>{
-			return e.idCategoria == id
-		});
-		return eventos;
+	listarEventosPorCategoria(id: number): CatalogoModel[]{
+		return this.eventos.filter((e)=>{return e.idCategoria === id});
 	}
 }

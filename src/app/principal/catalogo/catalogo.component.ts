@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CatalogoService } from './catalogo.service';
-import { CatalogoModel } from './catalogo.model';
+import { EventoModel } from '../evento/models/evento.model';
 
 @Component({
 	selector: 'catalogo',
@@ -10,7 +10,7 @@ import { CatalogoModel } from './catalogo.model';
 })
 export class CatalogoComponent implements OnInit {
 
-	public eventos: CatalogoModel[];
+	public eventos: EventoModel[];
 
 	constructor(
 		private route: ActivatedRoute,

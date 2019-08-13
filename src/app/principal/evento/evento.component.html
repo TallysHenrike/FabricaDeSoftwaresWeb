@@ -1,1 +1,30 @@
-<p>evento works!</p>
+<header class="titulo">
+    {{evento?.titulo}}
+</header>
+<div class="descricao">
+    {{evento?.descricao}}
+</div>
+
+<div class="painel">
+    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</span>
+    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length == 1">Patrocinador</span>
+
+    <div class="patrocinadores-colaboradore">
+        <patrocinador
+            *ngFor="let patrocinador of evento?.patrocinadores"
+            [patrocinador]="patrocinador">
+        </patrocinador>
+    </div>
+</div>
+
+<div class="painel">
+    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length > 1">Colaboradores</span>
+    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length == 1">Colaborador</span>
+    
+    <div class="patrocinadores-colaboradore">
+        <colaborador
+            *ngFor="let colaborador of evento?.colaboradores"
+            [colaborador]="colaborador">
+        </colaborador>
+    </div>
+</div>

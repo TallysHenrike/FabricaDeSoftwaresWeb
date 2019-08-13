@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CatalogoModel } from '../catalogo.model';
+import { EventoModel } from '../../evento/models/evento.model';
 
 @Component({
 	selector: 'cartao',
@@ -8,7 +8,7 @@ import { CatalogoModel } from '../catalogo.model';
 })
 export class CartaoComponent implements OnInit {
 
-	@Input() evento: CatalogoModel;
+	@Input() evento: EventoModel;
 
 	constructor() { }
 

@@ -14,6 +14,8 @@ import { ApresentacaoComponent } from './principal/apresentacao/apresentacao.com
 import { LazyLoadingIMGDirective } from './utilitarios/lazy-loading-img.directive';
 import { CatalogoService } from './principal/catalogo/catalogo.service';
 import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
+import { PatrocinadorComponent } from './principal/evento/patrocinador/patrocinador.component';
+import { ColaboradorComponent } from './principal/evento/colaborador/colaborador.component';
 
 @NgModule({
 		declarations: [
@@ -26,7 +28,9 @@ import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 		EventoComponent,
 		ApresentacaoComponent,
 		LazyLoadingIMGDirective,
-		CartaoComponent
+		CartaoComponent,
+		PatrocinadorComponent,
+		ColaboradorComponent
 	],
 	imports: [
 		BrowserModule,

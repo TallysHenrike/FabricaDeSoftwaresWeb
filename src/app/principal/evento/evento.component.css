@@ -24,26 +24,24 @@
 }
 
 .painel{
-    padding: 2rem;
-}
-
-.painel.patrocinador{
-    background-image: linear-gradient(#9e9e9e, #bdbdbd);
-}
-
-.painel.colaborador{
-    
-}
-
-.conteudo-do-painel{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    margin: 1rem;
 }
 
 .titulo-do-painel{
     display: block;
     width: 100%;
     text-align: center;
-    padding-bottom: 15px;
+    padding: 15px;
+    background-color: #81d4fa;
+    border-radius: 10px 10px 0px 0px;
+    box-sizing: border-box;
+}
+
+.conteudo-do-painel{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-image: linear-gradient(#9e9e9e, #bdbdbd);
+    border-radius: 0px 0px 10px 10px;
 }

@@ -1,0 +1,17 @@
+.inscrever{
+    display: flex;
+    margin: 1rem;
+}
+
+.formulario{
+    width: 60%;
+    min-height: 25vh;
+    background: linear-gradient(135deg, #b388ff, #82b1ff);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.lateral{
+    width: 40%;
+    background-image: linear-gradient(135deg, #424242, #212121);
+    border-radius: 0px 10px 10px 0px;
+}

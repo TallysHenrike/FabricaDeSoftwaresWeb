@@ -5,6 +5,7 @@ export class EventoModel {
     idEvento: number;
     idCategoria: number;
     titulo: string;
+    breveDescricao: string;
     descricao: string;
     caminhoDaImagem: string;
     patrocinadores?: PatrocinadorModel[];

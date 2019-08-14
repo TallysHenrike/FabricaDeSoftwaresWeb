@@ -5,7 +5,7 @@
     height: 25vh;
     max-height: 400px;
     min-height: 200px;
-    background-image: linear-gradient(#4db6ac, #ebebeb);
+    background-image: linear-gradient(#424242, transparent);
     font-size: 2rem;
     text-align: center;
     text-shadow: 0px 0px 2px;
@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     height: 25vh;
-    max-height: 400px;
+    min-height: 250px;
     text-align: center;
     padding: 4rem;
     box-sizing: border-box;
@@ -38,6 +38,7 @@
 .conteudo-do-painel{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .titulo-do-painel{

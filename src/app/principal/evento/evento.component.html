@@ -9,7 +9,7 @@
     <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</span>
     <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length == 1">Patrocinador</span>
 
-    <div class="conteudo-do-painel">
+    <div class="conteudo-do-painel" *ngIf="evento?.temPatrocinio">
         <patrocinador
             *ngFor="let patrocinador of evento?.patrocinadores"
             [patrocinador]="patrocinador">

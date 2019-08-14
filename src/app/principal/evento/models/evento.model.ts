@@ -8,6 +8,7 @@ export class EventoModel {
     breveDescricao: string;
     descricao: string;
     caminhoDaImagem: string;
+    temPatrocinio: boolean;
     patrocinadores?: PatrocinadorModel[];
     colaboradores?: ColaboradorModel[];
 }

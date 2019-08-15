@@ -15,7 +15,6 @@ import { LazyLoadingIMGDirective } from './utilitarios/lazy-loading-img.directiv
 import { CatalogoService } from './principal/catalogo/catalogo.service';
 import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 import { PatrocinadorComponent } from './principal/evento/patrocinador/patrocinador.component';
-import { ColaboradorComponent } from './principal/evento/colaborador/colaborador.component';
 import { InscreverComponent } from './principal/evento/inscrever/inscrever.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { InscreverComponent } from './principal/evento/inscrever/inscrever.compo
 		LazyLoadingIMGDirective,
 		CartaoComponent,
 		PatrocinadorComponent,
-		ColaboradorComponent,
 		InscreverComponent
 	],
 	imports: [

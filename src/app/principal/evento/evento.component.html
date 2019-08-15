@@ -1,4 +1,4 @@
-<header class="titulo">
+<header class="titulo-principal">
     {{evento?.titulo}}
 </header>
 <div class="descricao">
@@ -7,27 +7,23 @@
 
 <inscrever></inscrever>
 
-<div class="painel patrocinador">
-    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</span>
-    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length == 1">Patrocinador</span>
+<div class="titulo">
+        <h4 *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</h4>
+        <h4 *ngIf="evento?.patrocinadores.length == 1">Patrocinadores</h4>
+</div>
+<div class="patrocinador" *ngIf="evento?.temPatrocinio">
+    <patrocinador
+        *ngFor="let patrocinador of evento?.patrocinadores"
+        [patrocinador]="patrocinador">
+    </patrocinador>
+</div>
 
-    <div class="conteudo-do-painel" *ngIf="evento?.temPatrocinio">
-        <patrocinador
-            *ngFor="let patrocinador of evento?.patrocinadores"
-            [patrocinador]="patrocinador">
-        </patrocinador>
-    </div>
+<div class="titulo">
+    <h4>Localização</h4>
 </div>
-<!--
-<div class="painel colaborador">
-    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length > 1">Colaboradores</span>
-    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length == 1">Colaborador</span>
-    
-    <div class="conteudo-do-painel">
-        <colaborador
-            *ngFor="let colaborador of evento?.colaboradores"
-            [colaborador]="colaborador">
-        </colaborador>
-    </div>
-</div>
--->
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15287.648493096951!2d-49.260747348383575!3d-16.68128032879586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef164f8a85127%3A0x1a4b1265e6a4e602!2sPra%C3%A7a+Dr.+Pedro+Ludovico+Teixeira!5e0!3m2!1spt-BR!2sbr!4v1565909867729!5m2!1spt-BR!2sbr"
+    frameborder="0"
+    allowfullscreen
+    class="localizacao">
+</iframe>

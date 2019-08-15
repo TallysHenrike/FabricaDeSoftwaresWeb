@@ -1,5 +1,4 @@
 import { PatrocinadorModel } from './patrocinador.model';
-import { ColaboradorModel } from './colaborador.model';
 
 export class EventoModel {
     idEvento: number;
@@ -10,5 +9,4 @@ export class EventoModel {
     caminhoDaImagem: string;
     temPatrocinio: boolean;
     patrocinadores?: PatrocinadorModel[];
-    colaboradores?: ColaboradorModel[];
 }

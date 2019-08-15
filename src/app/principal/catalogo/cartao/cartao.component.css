@@ -1,0 +1,33 @@
+img{
+    max-width: 300px;
+    min-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.titulo,
+.descricao,
+.conteudo,
+.acao{
+    color: #fff;
+    padding: 1rem;
+}
+.data-do-evento{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    padding: 0rem 1rem;
+}
+
+.acao a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #7e57c2
+}

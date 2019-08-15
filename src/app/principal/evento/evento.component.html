@@ -1,0 +1,33 @@
+<header class="titulo">
+    {{evento?.titulo}}
+</header>
+<div class="descricao">
+    {{evento?.descricao}}
+</div>
+
+<inscrever></inscrever>
+
+<div class="painel patrocinador">
+    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</span>
+    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length == 1">Patrocinador</span>
+
+    <div class="conteudo-do-painel" *ngIf="evento?.temPatrocinio">
+        <patrocinador
+            *ngFor="let patrocinador of evento?.patrocinadores"
+            [patrocinador]="patrocinador">
+        </patrocinador>
+    </div>
+</div>
+<!--
+<div class="painel colaborador">
+    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length > 1">Colaboradores</span>
+    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length == 1">Colaborador</span>
+    
+    <div class="conteudo-do-painel">
+        <colaborador
+            *ngFor="let colaborador of evento?.colaboradores"
+            [colaborador]="colaborador">
+        </colaborador>
+    </div>
+</div>
+-->

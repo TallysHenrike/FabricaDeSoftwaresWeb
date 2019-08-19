@@ -1,22 +1,20 @@
 <div class="inscrever">
-    <!-- [formGroup]="perfil" (ngSubmit)="onSubmit()" -->
-    <form class="formulario">
-        <h2>Formulário de inscrição</h2>
-        
-        <div class="campo">
-            <input type="text" placeholder="Nome">
-        </div>
-        <div class="campo">
-            <input type="text" placeholder="Sobrenome">
-        </div>
-        <div class="campo">
-            <input type="tel" placeholder="Telefone">
-        </div>
-        <div class="campo">
-            <input type="text" placeholder="CEP">
-        </div>
+    <form-usuario
+        class="formulario"
+        *ngIf="true">
+    </form-usuario>
 
-        <button type="submit">Submit</button><br>
-    </form>
-    <div class="lateral"></div>
+    <div class="lateral">
+        <h3>Organizador</h3>
+        <img [caminhoDaImagem]="'https://picsum.photos/id/1/300/150'" LazyLoadingIMG class="lazy">
+        <span>Lorem ipsum dolor sit amet</span>
+
+        <ul class="itens-do-menu">
+            <li class="item-do-menu">
+                <a [class.ativo]="true">Dados pessoais</a>
+                <a [class.ativo]="false">Endereço</a>
+                <a [class.ativo]="false">Pagamento</a>
+            </li>
+        </ul>
+    </div>
 </div>

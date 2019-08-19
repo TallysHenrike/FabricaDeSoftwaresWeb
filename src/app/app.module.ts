@@ -16,6 +16,7 @@ import { CatalogoService } from './principal/catalogo/catalogo.service';
 import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 import { PatrocinadorComponent } from './principal/evento/patrocinador/patrocinador.component';
 import { InscreverComponent } from './principal/evento/inscrever/inscrever.component';
+import { FormUsuarioComponent } from './principal/evento/inscrever/form-usuario/form-usuario.component';
 
 @NgModule({
 		declarations: [
@@ -30,7 +31,8 @@ import { InscreverComponent } from './principal/evento/inscrever/inscrever.compo
 		LazyLoadingIMGDirective,
 		CartaoComponent,
 		PatrocinadorComponent,
-		InscreverComponent
+		InscreverComponent,
+		FormUsuarioComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,8 +1,7 @@
 <div class="inscrever">
-    <form-usuario
-        class="formulario"
-        *ngIf="true">
-    </form-usuario>
+    <form-usuario class="formulario" *ngIf="passoAtivo.um"></form-usuario>
+    <!--<form-endereco class="formulario" *ngIf="passoAtivo.dois"></form-endereco>-->
+    <!--<form-pagamento class="formulario" *ngIf="passoAtivo.tres"></form-pagamento>-->
 
     <div class="lateral">
         <h3>Organizador</h3>
@@ -11,9 +10,9 @@
 
         <ul class="itens-do-menu">
             <li class="item-do-menu">
-                <a [class.ativo]="true">Dados pessoais</a>
-                <a [class.ativo]="false">Endereço</a>
-                <a [class.ativo]="false">Pagamento</a>
+                <a (click)="setPasso(1)" [class.ativo]="passoAtivo.um">Dados pessoais</a>
+                <a (click)="setPasso(2)" [class.ativo]="passoAtivo.dois">Endereço</a>
+                <a (click)="setPasso(3)" [class.ativo]="passoAtivo.tres">Pagamento</a>
             </li>
         </ul>
     </div>

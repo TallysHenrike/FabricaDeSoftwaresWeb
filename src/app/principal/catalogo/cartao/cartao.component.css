@@ -29,5 +29,5 @@ img{
 .acao a{
     text-decoration: none;
     font-weight: bold;
-    color: #b388ff
+    color: var(--cor-padrao)
 }

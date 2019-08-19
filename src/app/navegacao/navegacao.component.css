@@ -17,7 +17,7 @@
 }
 
 .item-do-menu:hover{
-    background: linear-gradient(135deg, #b388ff, #82b1ff);
+    background: var(--linear-gradient);
 }
 
 .item-do-menu a{
@@ -38,6 +38,6 @@
 }
 
 .item-do-menu .ativo{
-    background: linear-gradient(135deg, #82b1ff, #b388ff);
+    background-image: var(--linear-gradient);
     border-left: 5px solid #212121;
 }

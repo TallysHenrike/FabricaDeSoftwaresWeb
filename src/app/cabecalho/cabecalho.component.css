@@ -27,6 +27,6 @@ a{
 }
 
 .ativo{
-    color: #b388ff;
+    color: var(--cor-padrao);
     font-weight: bold;
 }

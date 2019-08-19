@@ -1,6 +1,26 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+:root{
+    --tema-1: linear-gradient(135deg, #CE9FFC, #7367F0);
+    --tema-1-cor-padrao: #CE9FFC;
+
+    --tema-2: linear-gradient(135deg, #5EFCE8, #736EFE);
+    --tema-2-cor-padrao: #5EFCE8;
+
+    --tema-3: linear-gradient(135deg, #2AFADF, #4C83FF);
+    --tema-3-cor-padrao: #2AFADF;
+
+    --tema-4: linear-gradient(135deg, #97ABFF, #123597);
+    --tema-4-cor-padrao: #97ABFF;
+    
+    --tema-5: linear-gradient(135deg, #65FDF0, #1D6FA3);
+    --tema-5-cor-padrao: #65FDF0;
+    
+    --linear-gradient: var(--tema-4);
+    --cor-padrao: var(--tema-4-cor-padrao);
+}
+
 html {
     font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1200 - 320)));
 }
@@ -13,7 +33,7 @@ html {
 
 body {
     margin: 0px;
-    background: linear-gradient(135deg, #b388ff, #82b1ff);
+    background: var(--linear-gradient);
 }
 
 *{

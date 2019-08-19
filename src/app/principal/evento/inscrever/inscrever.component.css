@@ -9,8 +9,13 @@
     align-items: center;
     width: 60%;
     min-height: 25vh;
+    padding: 1rem 3rem;
     background: linear-gradient(135deg, #b388ff, #82b1ff);
     border-radius: 10px 0px 0px 10px;
+}
+
+.formulario h2{
+    color: rgba(255,255,255,.8);
 }
 
 .campo{
@@ -22,8 +27,9 @@
 .campo input{
     width: 100%;
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgba(255,255,255,.5);
     border-radius: 8px 8px 0px 0px;
+    color: rgba(255,255,255,.8);
     background-color: transparent;
     padding: .5rem;
     box-sizing: border-box;
@@ -33,7 +39,23 @@
 }
 
 .campo input:focus{
-    background-color: rgba(255,255,255,.2);
+    /*background-color: rgba(255,255,255,.2);*/
+}
+
+.campo input::-webkit-input-placeholder {
+    color: rgba(255,255,255,.5);
+}
+
+.campo input:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255,255,255,.5);
+}
+
+.campo input::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(255,255,255,.5);
+}
+
+.campo input:-ms-input-placeholder {  
+    color: rgba(255,255,255,.5);
 }
 
 .lateral{

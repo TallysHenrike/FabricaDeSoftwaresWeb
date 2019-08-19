@@ -1,12 +1,22 @@
 <div class="inscrever">
     <!-- [formGroup]="perfil" (ngSubmit)="onSubmit()" -->
     <form class="formulario">
-        <!--
+        <h2>Formulário de inscrição</h2>
+        
         <div class="campo">
-            <input type="text" formControlName="firstName">
+            <input type="text" placeholder="Nome">
         </div>
-        <button type="submit" [disabled]="!perfil.valid">Submit</button>
-        -->
+        <div class="campo">
+            <input type="text" placeholder="Sobrenome">
+        </div>
+        <div class="campo">
+            <input type="tel" placeholder="Telefone">
+        </div>
+        <div class="campo">
+            <input type="text" placeholder="CEP">
+        </div>
+
+        <button type="submit">Submit</button><br>
     </form>
     <div class="lateral"></div>
 </div>

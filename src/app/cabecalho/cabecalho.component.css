@@ -27,7 +27,7 @@ a{
 }
 
 .ativo{
-    color: var(--cor-padrao);
+    color: var(--cor-da-fonte);
     font-weight: bold;
 }
 
@@ -41,8 +41,8 @@ a{
     .categorias{
         display: flex;
         align-items: center;
-        background-image: linear-gradient(135deg, #424242, #212121);
-        border: 3px solid var(--cor-padrao);
+        background: var(--escuro);
+        border: 3px solid var(--borda);
         border-radius: 10px;
         height: 45px;
         box-sizing: border-box;

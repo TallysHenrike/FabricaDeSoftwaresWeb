@@ -2,23 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root{
-    --tema-1: linear-gradient(135deg, #CE9FFC, #7367F0);
-    --tema-1-cor-padrao: #CE9FFC;
+    --claro-primeiro: rgba(139, 67, 255, .8);
+    --claro-segundo: rgba(139, 67, 255, 1);
+    --claro-gradient: linear-gradient(135deg, var(--claro-primeiro), var(--claro-segundo));
 
-    --tema-2: linear-gradient(135deg, #5EFCE8, #736EFE);
-    --tema-2-cor-padrao: #5EFCE8;
+    --claro: var(--claro-gradient);
 
-    --tema-3: linear-gradient(135deg, #2AFADF, #4C83FF);
-    --tema-3-cor-padrao: #2AFADF;
 
-    --tema-4: linear-gradient(135deg, #97ABFF, #123597);
-    --tema-4-cor-padrao: #97ABFF;
-    
-    --tema-5: linear-gradient(135deg, #65FDF0, #1D6FA3);
-    --tema-5-cor-padrao: #65FDF0;
-    
-    --linear-gradient: var(--tema-4);
-    --cor-padrao: var(--tema-4-cor-padrao);
+    --escuro-primeiro: #424242;
+    --escuro-segundo: #212121;
+    --escuro-gradient: linear-gradient(135deg, var(--escuro-primeiro), var(--escuro-segundo));
+
+    --escuro: var(--escuro-gradient);
+
+    --borda: var(--claro-primeiro);
+    --cor-da-fonte: var(--claro-segundo);
 }
 
 html {
@@ -33,7 +31,7 @@ html {
 
 body {
     margin: 0px;
-    background: var(--linear-gradient);
+    background: var(--claro);
 }
 
 *{
@@ -46,13 +44,13 @@ body {
 /* COR PADRÃO */
 #cabecalho,
 #principal{
-    background-image: linear-gradient(135deg, #eee, #e0e0e0);
+    background: linear-gradient(135deg, #eee, #e0e0e0);
 }
 #navegacao{
-    background-image: linear-gradient(135deg, #424242, #212121);
+    background: var(--escuro);
 }
 #rodape{
-    background-image: linear-gradient(135deg, #37474f, #263238);
+    background: linear-gradient(135deg, #37474f, #263238);
 }
 
 /* GRID */
@@ -110,17 +108,20 @@ body {
 
 .menu-aberto {
     margin-left: 0px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media (max-width: 768px) {
     #navegacao {
         overflow-x: hidden;
         position: fixed;
-        width: 70vw;
-        margin-left: -70vw;
+        width: 60vw;
+        margin-left: -60vw;
         height: 100vh;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        transition: margin-left 0.5s cubic-bezier(1, 0, 0.6, 1);
+        transition: .5s cubic-bezier(1, 0, 0.6, 1);
+        transition-property:
+            margin-left,
+            box-shadow;
     }
 
     #abrir-menu {

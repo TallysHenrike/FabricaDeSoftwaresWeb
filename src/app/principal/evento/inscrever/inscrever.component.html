@@ -1,5 +1,5 @@
 <div class="inscrever">
-    <form-usuario class="formulario" *ngIf="passoAtivo.um"></form-usuario>
+    <form-usuario class="formulario" *ngIf="passoAtivo.um" (proximoPasso)="setPasso($event)"></form-usuario>
     <!--<form-endereco class="formulario" *ngIf="passoAtivo.dois"></form-endereco>-->
     <!--<form-pagamento class="formulario" *ngIf="passoAtivo.tres"></form-pagamento>-->
 
@@ -11,7 +11,11 @@
         <ul class="itens-do-menu">
             <li class="item-do-menu">
                 <a (click)="setPasso(1)" [class.ativo]="passoAtivo.um">Dados pessoais</a>
+            </li>
+            <li class="item-do-menu">
                 <a (click)="setPasso(2)" [class.ativo]="passoAtivo.dois">Endereço</a>
+            </li>
+            <li class="item-do-menu">
                 <a (click)="setPasso(3)" [class.ativo]="passoAtivo.tres">Pagamento</a>
             </li>
         </ul>

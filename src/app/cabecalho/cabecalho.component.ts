@@ -30,4 +30,8 @@ export class CabecalhoComponent implements OnInit {
 		}
 	}
 
+	mostrarCategorias(): void{
+		document.querySelector('#navegacao').classList.toggle('menu-aberto');
+	}
+
 }

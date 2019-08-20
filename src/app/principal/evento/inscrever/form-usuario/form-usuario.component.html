@@ -1,0 +1,18 @@
+<!-- [formGroup]="perfil" (ngSubmit)="onSubmit()" -->
+<form>
+    <h2>Formulário de inscrição</h2>
+    
+    <div class="campo">
+        <input type="text" placeholder="Nome"/>
+        <input type="text" placeholder="Sobrenome"/>
+    </div>
+    <div class="campo">
+        <input type="tel" placeholder="Telefone"/>
+        <input type="text" placeholder="CPF"/>
+    </div>
+    <div class="campo">
+        <input type="email" placeholder="E-Mail"/>
+    </div>
+
+    <button type="submit" (click)="proximo()">Próximo passo</button>
+</form>

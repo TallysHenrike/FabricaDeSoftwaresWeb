@@ -1,0 +1,8 @@
+<span class="titulo-menu">CATEGORIAS</span>
+<ul class="itens-do-menu">
+    <li
+        class="item-do-menu"
+        *ngFor="let categoria of categorias">
+        <a routerLinkActive="ativo" [routerLink]="['/categoria', categoria.idCategoria]">{{categoria.nome}}</a>
+    </li>
+</ul>

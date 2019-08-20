@@ -1,0 +1,23 @@
+<div class="inscrever">
+    <form-usuario class="formulario" *ngIf="passoAtivo.um" (proximoPasso)="setPasso($event)"></form-usuario>
+    <!--<form-endereco class="formulario" *ngIf="passoAtivo.dois"></form-endereco>-->
+    <!--<form-pagamento class="formulario" *ngIf="passoAtivo.tres"></form-pagamento>-->
+
+    <div class="lateral">
+        <h3>Organizador</h3>
+        <img [caminhoDaImagem]="'https://picsum.photos/id/1/300/150'" LazyLoadingIMG class="lazy">
+        <span>Lorem ipsum dolor sit amet</span>
+
+        <ul class="itens-do-menu">
+            <li class="item-do-menu">
+                <a (click)="setPasso(1)" [class.ativo]="passoAtivo.um">Dados pessoais</a>
+            </li>
+            <li class="item-do-menu">
+                <a (click)="setPasso(2)" [class.ativo]="passoAtivo.dois">Endereço</a>
+            </li>
+            <li class="item-do-menu">
+                <a (click)="setPasso(3)" [class.ativo]="passoAtivo.tres">Pagamento</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+.inscrever{
+    display: flex;
+    margin: 1rem;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 25vh;
+    padding: 1rem 3rem;
+    background: var(--claro);
+    border-radius: 10px 0px 0px 10px;
+    box-sizing: border-box
+}
+
+.lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background: var(--escuro);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.lateral h3{
+    display: block;
+    padding: .5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.lateral img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.lateral span{
+    color: #fff;
+    text-align: center;
+    padding: .2rem;
+}
+
+/* MENU */
+.itens-do-menu{
+    width: 100%;
+    list-style: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    /* reset */
+    padding-inline-start: 0px;
+    /* fim */
+}
+
+.item-do-menu a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-left: 0px solid #fff;
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition-property:
+        background-color,
+        border-left,
+        border-bottom;
+}
+
+.item-do-menu a:hover{
+    background: var(--claro);
+    border-left: 5px solid #212121;
+}
+
+.item-do-menu .ativo{
+    background: var(--claro);
+    border-left: 5px solid #212121;
+}
+
+
+@media (max-width: 768px) {
+    .inscrever{
+        flex-direction: column-reverse;
+    }
+
+    .formulario{
+        padding: 1rem;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .lateral{
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .lateral img{
+        height: 300px;
+    }
+
+    /* MENU */
+    .itens-do-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        padding-bottom: 0rem;
+    }
+
+    .item-do-menu{
+        width: 100%;
+    }
+
+    .item-do-menu a{
+        justify-content: center;
+    }
+
+    .item-do-menu a:hover{
+        border-bottom: 5px solid #212121;
+        border-left: 0px;
+    }
+    
+    .item-do-menu .ativo{
+        border-bottom: 5px solid #212121;
+        border-left: 0px;
+    }
+}

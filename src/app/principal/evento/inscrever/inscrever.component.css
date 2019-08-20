@@ -12,6 +12,7 @@
     padding: 1rem 3rem;
     background: var(--linear-gradient);
     border-radius: 10px 0px 0px 10px;
+    box-sizing: border-box
 }
 
 .lateral{
@@ -38,6 +39,7 @@
 
 .lateral span{
     color: #fff;
+    text-align: center;
     padding: .2rem;
 }
 
@@ -52,28 +54,74 @@
     /* fim */
 }
 
-.item-do-menu a:hover{
-    background: var(--linear-gradient);
-}
-
 .item-do-menu a{
     display: flex;
     align-items: center;
     padding: 10px;
     text-decoration: none;
     color: #fff;
-    border-left: 0px solid #b388ff;
+    border-left: 0px solid #fff;
     transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     transition-property:
         background-color,
-        border-left;
+        border-left,
+        border-bottom;
 }
 
 .item-do-menu a:hover{
+    background: var(--linear-gradient);
     border-left: 5px solid #212121;
 }
 
 .item-do-menu .ativo{
     background-image: var(--linear-gradient);
     border-left: 5px solid #212121;
+}
+
+
+@media (max-width: 768px) {
+    .inscrever{
+        flex-direction: column-reverse;
+    }
+
+    .formulario{
+        padding: 1rem;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .lateral{
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .lateral img{
+        height: 300px;
+    }
+
+    /* MENU */
+    .itens-do-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        padding-bottom: 0rem;
+    }
+
+    .item-do-menu{
+        width: 100%;
+    }
+
+    .item-do-menu a{
+        justify-content: center;
+    }
+
+    .item-do-menu a:hover{
+        border-bottom: 5px solid #212121;
+        border-left: 0px;
+    }
+    
+    .item-do-menu .ativo{
+        border-bottom: 5px solid #212121;
+        border-left: 0px;
+    }
 }

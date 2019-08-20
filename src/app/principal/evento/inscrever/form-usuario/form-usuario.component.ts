@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'form-usuario',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormUsuarioComponent implements OnInit {
 
+	@Output() proximoPasso: any = new EventEmitter();
+
 	constructor() { }
 
 	ngOnInit() { }
+
+	proximo(): Observable<number> {
+		return this.proximoPasso.emit(2);
+	}
 
 }

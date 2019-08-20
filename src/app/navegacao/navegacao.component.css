@@ -26,7 +26,7 @@
     padding: 10px;
     text-decoration: none;
     color: #fff;
-    border-left: 0px solid #b388ff;
+    border-left: 0px solid #fff;
     transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     transition-property:
         background-color,

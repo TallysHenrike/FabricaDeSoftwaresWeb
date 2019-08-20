@@ -109,7 +109,7 @@ body {
 }
 
 .menu-aberto {
-    margin-left: 0px;
+    margin-left: 0px !important;
 }
 
 @media (max-width: 768px) {

@@ -6,12 +6,19 @@
 
 .cartao{
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     display: flex;
     margin: 1rem 1rem 0px 1rem;
     background-image: linear-gradient(135deg, #424242, #212121);
     border: 3px solid var(--cor-padrao);
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .cartao{
+        flex-direction: column;
+        height: initial;
+    }
 }
 
 .cartao *{

@@ -1,7 +1,7 @@
 <div class="inscrever">
     <form-usuario class="formulario" *ngIf="passoAtivo.um" (proximoPasso)="setPasso($event)"></form-usuario>
-    <!--<form-endereco class="formulario" *ngIf="passoAtivo.dois"></form-endereco>-->
-    <!--<form-pagamento class="formulario" *ngIf="passoAtivo.tres"></form-pagamento>-->
+    <form-endereco class="formulario" *ngIf="passoAtivo.dois"></form-endereco>
+    <form-pagamento class="formulario" *ngIf="passoAtivo.tres"></form-pagamento>
 
     <div class="lateral">
         <h3>Organizador</h3>

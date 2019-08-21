@@ -17,6 +17,8 @@ import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 import { PatrocinadorComponent } from './principal/evento/patrocinador/patrocinador.component';
 import { InscreverComponent } from './principal/evento/inscrever/inscrever.component';
 import { FormUsuarioComponent } from './principal/evento/inscrever/form-usuario/form-usuario.component';
+import { FormEnderecoComponent } from './principal/evento/inscrever/form-endereco/form-endereco.component';
+import { FormPagamentoComponent } from './principal/evento/inscrever/form-pagamento/form-pagamento.component';
 
 @NgModule({
 		declarations: [
@@ -32,7 +34,9 @@ import { FormUsuarioComponent } from './principal/evento/inscrever/form-usuario/
 		CartaoComponent,
 		PatrocinadorComponent,
 		InscreverComponent,
-		FormUsuarioComponent
+		FormUsuarioComponent,
+		FormEnderecoComponent,
+		FormPagamentoComponent
 	],
 	imports: [
 		BrowserModule,

@@ -71,6 +71,7 @@
 .item-do-menu a:hover{
     background: var(--claro);
     border-left: 5px solid #212121;
+    cursor: pointer;
 }
 
 .item-do-menu .ativo{

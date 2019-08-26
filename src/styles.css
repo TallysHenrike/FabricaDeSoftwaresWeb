@@ -2,21 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root{
-    --claro-primeiro: rgba(139, 67, 255, .8);
-    --claro-segundo: rgba(139, 67, 255, 1);
-    --claro-gradient: linear-gradient(135deg, var(--claro-primeiro), var(--claro-segundo));
+    --menos-claro: rgb(123, 41, 255);
+    --mais-claro: rgba(139, 67, 255, 1);
+    --claro-gradient: linear-gradient(135deg, var(--menos-claro), var(--mais-claro));
 
     --claro: var(--claro-gradient);
 
-
-    --escuro-primeiro: #424242;
-    --escuro-segundo: #212121;
-    --escuro-gradient: linear-gradient(135deg, var(--escuro-primeiro), var(--escuro-segundo));
+    --menos-escuro: #424242;
+    --mais-escuro: #212121;
+    --escuro-gradient: linear-gradient(135deg, var(--menos-escuro), var(--mais-escuro));
 
     --escuro: var(--escuro-gradient);
 
-    --borda: var(--claro-primeiro);
-    --cor-da-fonte: var(--claro-segundo);
+    --borda: var(--menos-claro);
+    --cor-da-fonte: var(--mais-claro);
 }
 
 html {

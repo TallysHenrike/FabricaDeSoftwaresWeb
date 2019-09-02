@@ -19,6 +19,8 @@ import { InscreverComponent } from './principal/evento/inscrever/inscrever.compo
 import { FormUsuarioComponent } from './principal/evento/inscrever/form-usuario/form-usuario.component';
 import { FormEnderecoComponent } from './principal/evento/inscrever/form-endereco/form-endereco.component';
 import { FormPagamentoComponent } from './principal/evento/inscrever/form-pagamento/form-pagamento.component';
+import { FormLoginComponent } from './principal/evento/inscrever/form-login/form-login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 		declarations: [
@@ -36,11 +38,13 @@ import { FormPagamentoComponent } from './principal/evento/inscrever/form-pagame
 		InscreverComponent,
 		FormUsuarioComponent,
 		FormEnderecoComponent,
-		FormPagamentoComponent
+		FormPagamentoComponent,
+		FormLoginComponent
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		HttpClientModule
 	],
 	providers: [NavegacaoService, CatalogoService],
 	bootstrap: [AppComponent]

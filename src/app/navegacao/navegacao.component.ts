@@ -13,8 +13,10 @@ export class NavegacaoComponent implements OnInit {
 
 	constructor(private navegacaoService: NavegacaoService) { }
 
-	ngOnInit() { 
-		this.categorias = this.navegacaoService.listarCategorias();
+	ngOnInit() {
+		this.navegacaoService.listarCategorias().subscribe(res => {
+			this.categorias = res;
+		});
 	}
 
 }

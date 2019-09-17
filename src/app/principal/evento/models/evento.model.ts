@@ -8,5 +8,6 @@ export class EventoModel {
     descricao: string;
     caminhoDaImagem: string;
     temPatrocinio: boolean;
+    urlDoGoogleMaps: string;
     patrocinadores?: PatrocinadorModel[];
 }

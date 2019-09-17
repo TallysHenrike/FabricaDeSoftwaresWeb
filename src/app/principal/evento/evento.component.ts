@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CatalogoService } from '../catalogo/catalogo.service';
 import { EventoModel } from './models/evento.model';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'evento',
@@ -14,14 +15,20 @@ export class EventoComponent implements OnInit {
 
 	constructor(
 		private route: ActivatedRoute,
-		private catalogoService: CatalogoService
+		private catalogoService: CatalogoService,
+		public sanitizer: DomSanitizer
 	) { }
 
 	ngOnInit() {
 		this.route.params.subscribe(params => {
-			this.evento = this.catalogoService.consultarEvento(parseInt(params['id']));
+			this.buscarEvento(parseInt(params['id']));
 			//console.log(this.evento)
 		});
 	}
 
+	buscarEvento(id: number) {
+		this.catalogoService.consultarEvento(id).subscribe(res => {
+			this.evento = res;
+		});
+	}
 }

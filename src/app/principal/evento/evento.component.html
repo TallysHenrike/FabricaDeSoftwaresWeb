@@ -1,15 +1,13 @@
 <header class="titulo-principal">
     {{evento?.titulo}}
 </header>
-<div class="descricao">
-    {{evento?.descricao}}
-</div>
+<div class="descricao" [innerHtml]="evento?.corpo"></div>
 
 <inscrever></inscrever>
 
 <div class="titulo esquerda">
-        <h4 *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</h4>
-        <h4 *ngIf="evento?.patrocinadores.length == 1">Patrocinadores</h4>
+    <h4 *ngIf="evento?.patrocinadores?.length > 1">Patrocinadores</h4>
+    <h4 *ngIf="evento?.patrocinadores?.length == 1">Patrocinadores</h4>
 </div>
 <div class="patrocinador" *ngIf="evento?.temPatrocinio">
     <patrocinador
@@ -22,7 +20,7 @@
     <h4>Localização</h4>
 </div>
 <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15287.648493096951!2d-49.260747348383575!3d-16.68128032879586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef164f8a85127%3A0x1a4b1265e6a4e602!2sPra%C3%A7a+Dr.+Pedro+Ludovico+Teixeira!5e0!3m2!1spt-BR!2sbr!4v1565909867729!5m2!1spt-BR!2sbr"
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(evento?.urlDoGoogleMaps)"
     frameborder="0"
     allowfullscreen
     class="localizacao">

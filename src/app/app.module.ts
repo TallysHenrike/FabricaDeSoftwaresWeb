@@ -21,6 +21,7 @@ import { FormEnderecoComponent } from './principal/evento/inscrever/form-enderec
 import { FormPagamentoComponent } from './principal/evento/inscrever/form-pagamento/form-pagamento.component';
 import { FormLoginComponent } from './principal/evento/inscrever/form-login/form-login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Interceptor } from './https-request-interceptor';
 
 @NgModule({
 		declarations: [
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
+		Interceptor,
 		HttpClientModule
 	],
 	providers: [NavegacaoService, CatalogoService],

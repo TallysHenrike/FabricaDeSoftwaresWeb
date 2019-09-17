@@ -23,9 +23,7 @@ export class CatalogoService {
 		return this.httpClient.get<EventoModel[]>(`http://localhost/restrito/evento/listarEventosPorCategoria/${id}`);
 	}
 
-	consultarEvento(id: number): EventoModel{
-		let evento = null;
-		this.eventos.forEach((e)=>{if(e.idEvento === id) evento = e });
-		return evento;
+	consultarEvento(id: number): Observable<EventoModel> {
+		return this.httpClient.get<EventoModel>(`http://localhost/restrito/evento/buscar/${id}`);
 	}
 }

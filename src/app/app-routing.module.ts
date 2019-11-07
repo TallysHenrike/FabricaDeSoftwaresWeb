@@ -15,7 +15,7 @@ const ROUTES: Routes = [
 			{path: 'evento/:id', component: EventoComponent}
 		]
 	},
-	{path: 'apresentacao', component: ApresentacaoComponent}
+	{path: 'home', component: ApresentacaoComponent}
 ];
 
 @NgModule({

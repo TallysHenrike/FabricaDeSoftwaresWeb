@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CatalogoService } from './catalogo.service';
 import { EventoModel } from '../evento/models/evento.model';
+import { Categoria } from 'src/app/navegacao/navegacao.model';
 
 @Component({
 	selector: 'catalogo',
@@ -19,7 +20,13 @@ export class CatalogoComponent implements OnInit {
 
 	ngOnInit() {
 		this.route.params.subscribe(params => {
-			this.eventos = this.catalogoService.listarEventosPorCategoria(parseInt(params['id']));
+			this.listarCatalogo(parseInt(params['id']));
+		});
+	}
+
+	listarCatalogo(id: number) {
+		this.catalogoService.listarEventosPorCategoria(id).subscribe(res => {
+			this.eventos = res;
 		});
 	}
 

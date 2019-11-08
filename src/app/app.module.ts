@@ -15,7 +15,13 @@ import { LazyLoadingIMGDirective } from './utilitarios/lazy-loading-img.directiv
 import { CatalogoService } from './principal/catalogo/catalogo.service';
 import { CartaoComponent } from './principal/catalogo/cartao/cartao.component';
 import { PatrocinadorComponent } from './principal/evento/patrocinador/patrocinador.component';
-import { ColaboradorComponent } from './principal/evento/colaborador/colaborador.component';
+import { InscreverComponent } from './principal/evento/inscrever/inscrever.component';
+import { FormUsuarioComponent } from './principal/evento/inscrever/form-usuario/form-usuario.component';
+import { FormEnderecoComponent } from './principal/evento/inscrever/form-endereco/form-endereco.component';
+import { FormPagamentoComponent } from './principal/evento/inscrever/form-pagamento/form-pagamento.component';
+import { FormLoginComponent } from './principal/evento/inscrever/form-login/form-login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Interceptor } from './https-request-interceptor';
 
 @NgModule({
 		declarations: [
@@ -30,11 +36,17 @@ import { ColaboradorComponent } from './principal/evento/colaborador/colaborador
 		LazyLoadingIMGDirective,
 		CartaoComponent,
 		PatrocinadorComponent,
-		ColaboradorComponent
+		InscreverComponent,
+		FormUsuarioComponent,
+		FormEnderecoComponent,
+		FormPagamentoComponent,
+		FormLoginComponent
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		Interceptor,
+		HttpClientModule
 	],
 	providers: [NavegacaoService, CatalogoService],
 	bootstrap: [AppComponent]

@@ -1,31 +1,27 @@
-<header class="titulo">
+<header class="titulo-principal">
     {{evento?.titulo}}
 </header>
-<div class="descricao">
-    {{evento?.descricao}}
+<div class="descricao" [innerHtml]="evento?.corpo"></div>
+
+<inscrever></inscrever>
+
+<div class="titulo esquerda">
+    <h4 *ngIf="evento?.patrocinadores?.length > 1">Patrocinadores</h4>
+    <h4 *ngIf="evento?.patrocinadores?.length == 1">Patrocinadores</h4>
+</div>
+<div class="patrocinador" *ngIf="evento?.temPatrocinio">
+    <patrocinador
+        *ngFor="let patrocinador of evento?.patrocinadores"
+        [patrocinador]="patrocinador">
+    </patrocinador>
 </div>
 
-<div class="painel patrocinador">
-    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length > 1">Patrocinadores</span>
-    <span class="titulo-do-painel" *ngIf="evento?.patrocinadores.length == 1">Patrocinador</span>
-
-    <div class="conteudo-do-painel" *ngIf="evento?.temPatrocinio">
-        <patrocinador
-            *ngFor="let patrocinador of evento?.patrocinadores"
-            [patrocinador]="patrocinador">
-        </patrocinador>
-    </div>
+<div class="titulo esquerda">
+    <h4>Localização</h4>
 </div>
-<!--
-<div class="painel colaborador">
-    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length > 1">Colaboradores</span>
-    <span class="titulo-do-painel" *ngIf="evento?.colaboradores.length == 1">Colaborador</span>
-    
-    <div class="conteudo-do-painel">
-        <colaborador
-            *ngFor="let colaborador of evento?.colaboradores"
-            [colaborador]="colaborador">
-        </colaborador>
-    </div>
-</div>
--->
+<iframe
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(evento?.urlDoGoogleMaps)"
+    frameborder="0"
+    allowfullscreen
+    class="localizacao">
+</iframe>

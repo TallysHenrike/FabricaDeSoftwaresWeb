@@ -27,6 +27,24 @@ a{
 }
 
 .ativo{
-    color: #7e57c2;
+    color: var(--cor-da-fonte);
     font-weight: bold;
+}
+
+.categorias{display: none;}
+
+@media (max-width: 768px) {
+    nav{
+        justify-content: space-evenly;
+    }
+
+    .categorias{
+        display: flex;
+        align-items: center;
+        background: var(--escuro);
+        border: 3px solid var(--borda);
+        border-radius: 10px;
+        height: 45px;
+        box-sizing: border-box;
+    }
 }

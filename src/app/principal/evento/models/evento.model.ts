@@ -1,5 +1,4 @@
 import { PatrocinadorModel } from './patrocinador.model';
-import { ColaboradorModel } from './colaborador.model';
 
 export class EventoModel {
     idEvento: number;
@@ -9,6 +8,6 @@ export class EventoModel {
     descricao: string;
     caminhoDaImagem: string;
     temPatrocinio: boolean;
+    urlDoGoogleMaps: string;
     patrocinadores?: PatrocinadorModel[];
-    colaboradores?: ColaboradorModel[];
 }

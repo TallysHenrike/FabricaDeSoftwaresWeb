@@ -1,20 +1,20 @@
 import { Categoria } from './navegacao.model';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
+const httpOptions = {
+	headers: new HttpHeaders({
+		'Content-Type': 'application/json'
+	})
+};
+
+@Injectable()
 export class NavegacaoService {
-    private categorias: Categoria[] = [];
-    
-    constructor(){
-		for(let i = 0; i < 4; i++){
-			this.categorias.push({
-				idCategoria: i+1,
-				nome: `Lorem ipsum ${i+1}`,
-				descricao: 'Descrição de Lorem ipsum',
-				caminhoDaImagem: 'caminho/imagem.png'
-			});
-		}
-	}
+	
+	constructor(private httpClient: HttpClient){}
 
-    listarCategorias(): Categoria[]{
-        return this.categorias;
+    listarCategorias():  Observable<Categoria[]>{
+		return this.httpClient.get<Categoria[]>(`http://localhost/restrito/categoria/listar`);
     }
 }

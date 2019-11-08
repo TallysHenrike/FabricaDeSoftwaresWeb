@@ -1,6 +1,23 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+:root{
+    --menos-claro: rgb(123, 41, 255);
+    --mais-claro: rgba(139, 67, 255, 1);
+    --claro-gradient: linear-gradient(135deg, var(--menos-claro), var(--mais-claro));
+
+    --claro: var(--claro-gradient);
+
+    --menos-escuro: #424242;
+    --mais-escuro: #212121;
+    --escuro-gradient: linear-gradient(135deg, var(--menos-escuro), var(--mais-escuro));
+
+    --escuro: var(--escuro-gradient);
+
+    --borda: var(--menos-claro);
+    --cor-da-fonte: var(--mais-claro);
+}
+
 html {
     font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1200 - 320)));
 }
@@ -13,24 +30,26 @@ html {
 
 body {
     margin: 0px;
-    background-image: linear-gradient(#7e57c2, #673ab7);
+    background: var(--claro);
 }
 
 *{
     font-family: 'Roboto', sans-serif;
-    margin: 0px;
+    outline: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
 /* COR PADRÃO */
 #cabecalho,
 #principal{
-    background-image: linear-gradient(#eee, #e0e0e0);
+    background: linear-gradient(135deg, #eee, #e0e0e0);
 }
 #navegacao{
-    background-image: linear-gradient(#424242, #212121);
+    background: var(--escuro);
 }
 #rodape{
-    background-image: linear-gradient(#37474f, #263238);
+    background: linear-gradient(135deg, #37474f, #263238);
 }
 
 /* GRID */
@@ -87,18 +106,21 @@ body {
 }
 
 .menu-aberto {
-    margin-left: 0px;
+    margin-left: 0px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media (max-width: 768px) {
     #navegacao {
         overflow-x: hidden;
         position: fixed;
-        width: 70vw;
-        margin-left: -70vw;
+        width: 60vw;
+        margin-left: -60vw;
         height: 100vh;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        transition: margin-left 0.5s cubic-bezier(1, 0, 0.6, 1);
+        transition: .5s cubic-bezier(1, 0, 0.6, 1);
+        transition-property:
+            margin-left,
+            box-shadow;
     }
 
     #abrir-menu {

@@ -6,7 +6,7 @@ export class EventoModel {
     titulo: string;
     breveDescricao: string;
     descricao: string;
-    caminhoDaImagem: string;
+    imagemPrincipal: string;
     temPatrocinio: boolean;
     urlDoGoogleMaps: string;
     patrocinadores?: PatrocinadorModel[];

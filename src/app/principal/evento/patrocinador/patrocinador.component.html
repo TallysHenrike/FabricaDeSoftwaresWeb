@@ -1,5 +1,5 @@
 <div class="patrocinador">
-    <img [caminhoDaImagem]="patrocinador.caminhoDaImagem" LazyLoadingIMG class="lazy">
+    <img [caminhoDaImagem]="'data:image/png;base64,' + patrocinador.imagem" LazyLoadingIMG class="lazy">
     <div class="informacoes">
         <h4>{{patrocinador.nome}}</h4>
         <span>{{patrocinador.descricao}}</span>

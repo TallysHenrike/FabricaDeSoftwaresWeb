@@ -1,4 +1,4 @@
-<img [caminhoDaImagem]="evento.caminhoDaImagem" LazyLoadingIMG class="lazy"/>
+<img [caminhoDaImagem]="'data:image/png;base64,' + evento.imagemPrincipal" LazyLoadingIMG class="lazy"/>
 <div class="conteudo">
     <div class="titulo">{{evento.titulo}}</div>
     <div class="descricao">{{evento.descricao}}</div>

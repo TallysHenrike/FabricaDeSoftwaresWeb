@@ -12,18 +12,18 @@ export class CatalogoService {
 	constructor(private httpClient: HttpClient){}
 
     listarCategorias():  Observable<PatrocinadorModel[]>{
-		return this.httpClient.get<PatrocinadorModel[]>(`http://localhost/restrito/patrocinador/listar`);
+		return this.httpClient.get<PatrocinadorModel[]>(`https://api.arscrift.digital/restrito/patrocinador/listar`);
     }
 
 	listarEventos(): Observable<EventoModel[]> {
-		return this.httpClient.get<EventoModel[]>(`http://localhost/restrito/evento/listar`);
+		return this.httpClient.get<EventoModel[]>(`https://api.arscrift.digital/restrito/evento/listar`);
 	}
 
 	listarEventosPorCategoria(id: number): Observable<EventoModel[]> {
-		return this.httpClient.get<EventoModel[]>(`http://localhost/restrito/evento/listarEventosPorCategoria/${id}`);
+		return this.httpClient.get<EventoModel[]>(`https://api.arscrift.digital/restrito/evento/listarEventosPorCategoria/${id}`);
 	}
 
 	consultarEvento(id: number): Observable<EventoModel> {
-		return this.httpClient.get<EventoModel>(`http://localhost/restrito/evento/buscar/${id}`);
+		return this.httpClient.get<EventoModel>(`https://api.arscrift.digital/restrito/evento/buscar/${id}`);
 	}
 }

@@ -15,6 +15,6 @@ export class NavegacaoService {
 	constructor(private httpClient: HttpClient){}
 
     listarCategorias():  Observable<Categoria[]>{
-		return this.httpClient.get<Categoria[]>(`http://localhost/restrito/categoria/listar`);
+		return this.httpClient.get<Categoria[]>(`https://api.arscrift.digital/restrito/categoria/listar`);
     }
 }
